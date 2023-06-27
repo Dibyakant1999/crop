@@ -1,0 +1,155 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+
+        <a href="/" class="header-logo">
+            <img src="assets/images/logo.png" alt="logo" class="logo">
+        </a>
+
+        <a href="/dashboard" class="header-link"><i class="fa fa-chart-pie"></i>Dashboard</a>
+        <a href="/reports" class="header-link"><i class="fa fa-file"></i>Reports</a>
+
+        <a class="header-clk d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="mdi mdi-dots-vertical"></i>
+        </a>
+
+        <div class="collapse navbar-collapse top-dropdown" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle no-arrow" id="navbarDropdownMenuLink-11" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bell"></i>
+                        <span class="badge badge-info">2</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-11">
+                        <div class="drop-heading">
+                            <h5 class="text-dark mb-0">You have Notification<span class="badge badge-info">2</span>
+                            </h5>
+                        </div>
+                        <div class="dropdown-divider m-0"></div>
+                        <ul class="list-noti">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="circle"><i class="fa fa-bell"></i></div>
+                                    <div class="info">
+                                        <h6>New review received</h6>
+                                        <small class="text-muted">2 hours ago</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <span class="circle"><i class="fa fa-bell"></i></span>
+                                    <div class="info">
+                                        <h6>New notification received</h6>
+                                        <small class="text-muted">1 week ago</small>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="dropdown-item text-center py-3">View all Notification</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link profile dropdown-toggle" id="navbarDropdownMenuLink-22" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/images/user-default.png" class="profile">
+                        <!-- <span class="profile-title"><small>dasda</small></span> -->
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-22">
+                        <div class="drop-heading">
+                            <div class="text-center">
+                                <h5 class="text-dark mb-0">Tarini Prasad Das, <small class="text-muted">Administrator</small></h5>
+                                
+                            </div>
+                        </div>
+                        <div class="dropdown-divider m-0"></div>
+                        <div class="dropdown-divider m-0"></div>
+                        <a class="dropdown-item" href="javascript:void(0)" data-toggle="modal" data-target="#changePasswordModal"><i class="fa fa-key"></i>Change Password</a>
+                        <div class="dropdown-divider m-0"></div>
+                        <button class="dropdown-item"><i class="fa fa-power-off" ></i>Logout</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog modal-sm modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Change Password</h5>
+                <button class="btn-close" data-dismiss="modal" aria-label="Close" id="closeChangePasswordModal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row form-group">
+                        <div class="col-md-11" id="show_hide_password">
+                            <label class="form-label">Old Password <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter Old Password">
+                            <div class="custom-input-group-addon">
+                                <a href="javascript:void(0)" class="text-muted"><i class="fa fa-eye-slash"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="custom-input-group-addon">
+                                <a href="javascript:void(0)" class="text-muted" data-toggle="tooltip"
+                                    title="Input your old Pasword ,sent to your emailId "><i aria-hidden="true"
+                                        class="fa fa-circle-info"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-11" id="show_hide_password_2">
+                            <label class="form-label">New Password <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="password2" placeholder="Enter Old Password">
+                            <div class="custom-input-group-addon">
+                                <a href="javascript:void(0)" class="text-muted"><i class="fa fa-eye-slash"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="custom-input-group-addon">
+                                <a href="javascript:void(0)" class="text-muted" data-toggle="tooltip"
+                                    title="Password must have 6 to 14 character with having one Capital, Alphanumeric & Special symbols"><i
+                                        aria-hidden="true" class="fa fa-circle-info"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-11" id="show_hide_password_3">
+                            <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="password3" placeholder="Confirm Password">
+                            <div class="custom-input-group-addon">
+                                <a href="javascript:void(0)" class="text-muted"><i class="fa fa-eye-slash"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="custom-input-group-addon">
+                                <a href="javascript:void(0)" class="text-muted" data-toggle="tooltip"
+                                    title="New password & confirm password must be Same"><i aria-hidden="true"
+                                        class="fa fa-circle-info"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button type="submit"
+                                class="btn btn-lime btn-radius">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

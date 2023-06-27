@@ -1,0 +1,218 @@
+<app-masterheader></app-masterheader>
+
+<div class="wrapper">
+
+	<!-- <app-sidebar></app-sidebar> -->
+
+	<div id="content">
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<h4 class="custom-title">Reports</h4>
+							<div class="row">
+								<div class="col-md-1 mt-2">
+									<label>District :</label>
+								</div>
+								<div class="col-md-2">
+									<select class="form-control">
+										<option selected="selected">-- Select District --</option>
+										<option>Angul</option>
+										<option>Balasore</option>
+									</select>
+								</div>
+								<div class="col-md-1 mt-2">
+									<label>Tehsil :</label>
+								</div>
+								<div class="col-md-2">
+									<select class="form-control">
+										<option selected="selected">-- Select Tehsil --</option>
+										<option>Banarpal</option>
+										<option>Chhendipada</option>
+									</select>
+								</div>
+								<div class="col-md-1 mt-2">
+									<label>Status :</label>
+								</div>
+								<div class="col-md-2">
+									<select class="form-control">
+										<option selected="selected">-- Select Status --</option>
+										<option>Pending</option>
+										<option>Completed</option>
+									</select>
+								</div>
+								<div class="col-md-3">
+									<button class="btn btn-lime">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table table-striped mb-0" id="reportDatatable" datatable>
+									<thead>
+										<tr>
+											<th width="5%">Sl. No.</th>
+											<th>District</th>
+											<th>Tehsil</th>
+											<th>Plot No.</th>
+											<th>Khata No.</th>
+											<th>Plot Area (Acre)</th>
+											<th>Point</th>
+											<th>Survey Date / Time</th>
+											<th>Status</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Angul</td>
+											<td>Banarpal</td>
+											<td>117</td>
+											<td>25</td>
+											<td>0.746</td>
+											<td>14</td>
+											<td>27.05.2023 11:14:31 AM</td>
+											<td><span class="badge badge-warning rounded-pill">Pending</span></td>
+											<td>
+												<a href="javascript:void(0)" data-toggle-second="tooltip" title="Point Details" class="btn btn-sm btn-indigo btn-icon btn-radius" data-toggle="modal" data-target="#pointModal"><i class="fa fa-eye"></i></a>
+												<a href="/mapview" target="_blank" data-toggle-second="tooltip" title="Map View" class="btn btn-sm btn-cyan btn-icon btn-radius"><i class="fa fa-location-dot"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Angul</td>
+											<td>Chhendipada</td>
+											<td>2145</td>
+											<td>53</td>
+											<td>1.254</td>
+											<td>26</td>
+											<td>25.05.2023 10:33:15 AM</td>
+											<td><span class="badge badge-warning rounded-pill">Pending</span></td>
+											<td>
+												<a href="javascript:void(0)" data-toggle-second="tooltip" title="Point Details" class="btn btn-sm btn-indigo btn-icon btn-radius" data-toggle="modal" data-target="#pointModal"><i class="fa fa-eye"></i></a>
+												<a href="/mapview" target="_blank" data-toggle-second="tooltip" title="Map View" class="btn btn-sm btn-cyan btn-icon btn-radius"><i class="fa fa-location-dot"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Angul</td>
+											<td>Athamallik</td>
+											<td>2178</td>
+											<td>117</td>
+											<td>0.685</td>
+											<td>34</td>
+											<td>17.05.2023 12:16:41 PM</td>
+											<td><span class="badge badge-success rounded-pill">Completed</span></td>
+											<td>
+												<a href="javascript:void(0)" data-toggle-second="tooltip" title="Point Details" class="btn btn-sm btn-indigo btn-icon btn-radius" data-toggle="modal" data-target="#pointModal"><i class="fa fa-eye"></i></a>
+												<a href="/mapview" target="_blank" data-toggle-second="tooltip" title="Map View" class="btn btn-sm btn-cyan btn-icon btn-radius"><i class="fa fa-location-dot"></i></a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- <div id="footer">
+		<app-masterfooter></app-masterfooter>
+	</div> -->
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="pointModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">VIew Point Details</h5>
+                <button class="btn-close" data-dismiss="modal" id="closeAddCatalougeModal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                	<table class="table table-sm table-striped mb-0">
+                		<tbody>
+                			<tr>
+                				<td width="50%"><strong>Plot No. :</strong></td>
+                				<td>2415</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Khata No. :</strong></td>
+                				<td>76</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Plot Area (Acre) :</strong></td>
+                				<td>0.654</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Surveyor Name :</strong></td>
+                				<td>Kahnu Charan Pradhan</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Status :</strong></td>
+                				<td>Pending</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Mobile Device ID :</strong></td>
+                				<td>1620b7da0589f67e</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Mobile No. :</strong></td>
+                				<td>8055421436</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Latitude :</strong></td>
+                				<td>20.913445</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Longitude :</strong></td>
+                				<td>84.150928</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Date / Time :</strong></td>
+                				<td>28.05.2023 11:06:31 AM</td>
+                			</tr>
+                			<tr>
+                				<td><strong>Plot Photo :</strong></td>
+                				<td>
+                					<div class="tz-gallery">
+                						<div class="row">
+                							<div class="col-md-12">
+			                					<a class="lightbox img-fluid" href="assets/images/crop.jpg">
+													<img src="assets/images/crop.jpg" alt="Plot Photo">
+												</a>
+											</div>
+										</div>
+									</div>
+								</td>
+                			</tr>
+                		</tbody>
+                	</table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
